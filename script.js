@@ -1,6 +1,3 @@
-function nextPage() {
-    window.location.href = "yes.html";
-}
 
 function moveButton() {
     var noButton = document.getElementById('noButton');
