@@ -1,4 +1,3 @@
-
 function moveButton() {
     var noButton = document.getElementById('noButton');
     var x = Math.random() * (window.innerWidth - noButton.offsetWidth - 85);
