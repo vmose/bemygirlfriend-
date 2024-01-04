@@ -9,7 +9,7 @@ function moveButton() {
 
 // script.js
 
-let audioPlayer = new Audio('https://www.youtube.com/embed/CwGbMYLjIpQ?autoplay=1&loop=1&mute=1');
+let audioPlayer = new Audio('https://www.youtube.com/watch?v=CwGbMYLjIpQ');
 let isAudioPlaying = true;
 
 function toggleAudio() {
