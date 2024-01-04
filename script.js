@@ -7,17 +7,17 @@ function moveButton() {
     noButton.style.top = `${y}px`;
 }
 
-// script.js
 
-let audioPlayer = new Audio('https://www.youtube.com/watch?v=CwGbMYLjIpQ');
-let isAudioPlaying = true;
 
-function toggleAudio() {
-  if (isAudioPlaying) {
-    audioPlayer.pause();
-  } else {
-    audioPlayer.play();
-  }
-  isAudioPlaying = !isAudioPlaying;
-}
+// let audioPlayer = new Audio('https://www.youtube.com/watch?v=CwGbMYLjIpQ');
+// let isAudioPlaying = true;
+
+// function toggleAudio() {
+//   if (isAudioPlaying) {
+//     audioPlayer.pause();
+//   } else {
+//     audioPlayer.play();
+//   }
+//   isAudioPlaying = !isAudioPlaying;
+// }
 
