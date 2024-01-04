@@ -1,63 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Audio Player</title>
-    <style>
-        #audio-player {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-        }
-    </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="container">
+    <div>
+      <h1 class="header_text">Be my girl?</h1>
+    </div>
+    <div class="gif_container">
+      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+    </div>
+    <div class="audio_button">
+      <button id="audioToggleBtn" onclick="toggleAudio()">
+        <img src="https://img.icons8.com/material-outlined/24/000000/speaker.png" alt="Audio Toggle">
+      </button>
+    </div>
+    <div class="buttons">
+      <button class="btn" id="yesButton" onclick="window.location.href='yes.html'">Yes</button>
+      <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+    </div>
+  </div>
 
-<div id="audio-player">
-    <button id="playPauseBtn" onclick="togglePlayPause()">Play/Pause</button>
-</div>
-
-<!-- Load YouTube IFrame API -->
-<script src="https://www.youtube.com/iframe_api"></script>
-
-<script>
-    var player;
-    var playPauseBtn = document.getElementById("playPauseBtn");
-
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            height: '0',
-            width: '0',
-            videoId: 'YOUR_YOUTUBE_VIDEO_ID',
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    }
-
-    function onPlayerReady(event) {
-        // Event fired when the player is ready to receive API calls
-    }
-
-    function onPlayerStateChange(event) {
-        // Event fired when the player's state changes (e.g., play, pause, ended)
-        if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
-            playPauseBtn.innerHTML = "Play";
-        } else {
-            playPauseBtn.innerHTML = "Pause";
-        }
-    }
-
-    function togglePlayPause() {
-        if (player.getPlayerState() == YT.PlayerState.PLAYING) {
-            player.pauseVideo();
-        } else {
-            player.playVideo();
-        }
-    }
-</script>
-
+  <script src="./script.js"></script>
 </body>
 </html>
