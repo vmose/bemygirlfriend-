@@ -1,1 +1,1 @@
-Whaddaya say? 🥰✨
+Archived. She said no
